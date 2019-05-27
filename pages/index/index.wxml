@@ -8,7 +8,7 @@
     </block>
   </view>
   <view class="usermotto">
-    <text class="user-motto">{{motto}}</text>
-    <text class="user-motto2">{{motto}}</text>
+    <text class="user-motto" bindtap="bindViewTap2">{{motto}}</text>
+    <text class="user-motto2" bindtap="bindViewTap">{{motto}}</text>
   </view>
 </view>

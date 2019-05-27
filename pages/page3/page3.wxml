@@ -1,0 +1,4 @@
+<!--page3.wxml-->
+<view class="pg3">
+  <view>{{secondPage}}</view>
+</view>
