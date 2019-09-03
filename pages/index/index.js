@@ -19,11 +19,11 @@ Page({
     current: 'tab1',
     current_scroll: 'tab1',
     pageList1: '',
-    pageList2:'',
-    pageList3:'',
-    menuTop:'',
-    menuFixed:'',
-    
+    pageList2: '',
+    pageList3: '',
+    menuTop: '',
+    menuFixed: '',
+
   },
   //事件处理函数
   bindViewTap: function () {
@@ -86,30 +86,38 @@ Page({
   },
   getList: function () {
     var that = this;
-    wx.request({
-      url: 'https://www.easy-mock.com/mock/5c1c59326fedb679d1b94a74/hwp-h5/wx-list',
-      method: "POST",
-      data: "123",
-      header: {
-        'Content-Type': 'json'
-      },
-      success: function (res) {
-        console.log(res);
-        
-        if (res.data.respCode === '01') {
-          let info = res.data.respBizMsg.pageInfo;
-          that.setData({
-            pageList1: info.pageList.page1,
-            pageList2: info.pageList.page2,
-            pageList3: info.pageList.page3,
-            imgUrls: info.swiperList,
-          })
-        }
-      },
-      fail: function () {
-        console.log("接口调用失败");
-      }
+    console.log(require('./data'));
+    let info = require('./data').data.respBizMsg.pageInfo;
+    that.setData({
+      pageList1: info.pageList.page1,
+      pageList2: info.pageList.page2,
+      pageList3: info.pageList.page3,
+      imgUrls: info.swiperList,
     })
+    // wx.request({
+    //   url: 'https://www.easy-mock.com/mock/5c1c59326fedb679d1b94a74/hwp-h5/wx-list',
+    //   method: "POST",
+    //   data: "123",
+    //   header: {
+    //     'Content-Type': 'json'
+    //   },
+    //   success: function (res) {
+    //     console.log(res);
+
+    //     if (res.data.respCode === '01') {
+    //       let info = res.data.respBizMsg.pageInfo;
+    //       that.setData({
+    //         pageList1: info.pageList.page1,
+    //         pageList2: info.pageList.page2,
+    //         pageList3: info.pageList.page3,
+    //         imgUrls: info.swiperList,
+    //       })
+    //     }
+    //   },
+    //   fail: function () {
+    //     console.log("接口调用失败");
+    //   }
+    // })
   },
   initClientRect: function () {
     var that = this;
@@ -123,11 +131,11 @@ Page({
   },
   onPageScroll: function (scroll) {
     var that = this;
-    if (scroll.scrollTop > that.data.menuTop){
+    if (scroll.scrollTop > that.data.menuTop) {
       that.setData({
         menuFixed: true
       })
-    }else{
+    } else {
       that.setData({
         menuFixed: false
       })
