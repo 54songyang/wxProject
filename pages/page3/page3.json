@@ -1,4 +1,6 @@
 {
   "navigationBarTitleText": "第二页",
-  "usingComponents": {}
+  "usingComponents": {
+    "i-button": "../../dist/button/index"
+  }
 }

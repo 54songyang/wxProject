@@ -26,3 +26,54 @@
   font-size: 30px;
   color: red;
 }
+
+.slide-image{
+  display: block;
+  width: 100%;
+}
+.page-list{
+  margin-top:10rpx;
+}
+.tab-fixed{
+  position: fixed;
+  top: 0;
+  margin-top: 0;
+  width: 100%;
+  z-index: 99999;
+}
+.tab-box{
+  height: 42rpx;
+}
+.container .page-list{
+  background: #f0f0f0;
+  width: 100%;
+}
+.container .list-body{
+  display: flex;
+  font-size: 28rpx;
+  background: #fff;
+  margin-bottom: 15rpx;
+  padding:10rpx 20rpx;
+  color: #333;
+}
+.container .list-body:last-child{
+margin-bottom: 0;
+}
+.container .list-body .user-photo{
+  display: block;
+  width: 180rpx;
+  height: auto;
+  margin-right: 10px;
+}
+.container .list-body .info-box{
+  display: flex;
+  flex: 1;
+  flex-direction:column;
+}
+.container .list-body .info-box .page-info{
+  flex: 1;
+}
+.container .list-body .num-box{
+  font-size: 20rpx;
+  text-align: right;
+}

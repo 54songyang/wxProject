@@ -10,5 +10,36 @@
     "navigationBarTitleText": "WeChat",
     "navigationBarTextStyle": "black"
   },
-  "sitemapLocation": "sitemap.json"
+  "sitemapLocation": "sitemap.json",
+  "tabBar": {
+    "color": "#666",
+    "selectedColor": "#333",
+    "borderStyle": "white",
+    "list": [
+      {
+        "selectedIconPath": "images/home-page-sle.png",
+        "iconPath": "images/home-page.png",
+        "pagePath": "pages/index/index",
+        "text": "首页"
+      },
+      {
+        "selectedIconPath": "images/share-sle.png",
+        "iconPath": "images/share.png",
+        "pagePath": "pages/logs/logs",
+        "text": "我要发布"
+      },
+      {
+        "selectedIconPath": "images/people-sle.png",
+        "iconPath": "images/people.png",
+        "pagePath": "pages/page3/page3",
+        "text": "个人中心"
+      },
+      {
+        "selectedIconPath": "images/wx-sle.png",
+        "iconPath": "images/wx.png",
+        "pagePath": "pages/page3/page3",
+        "text": "加微信群"
+      }
+    ]
+  }
 }

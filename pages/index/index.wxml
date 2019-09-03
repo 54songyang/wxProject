@@ -1,7 +1,9 @@
-<!--index.wxml-->
+<!-- index.wxml -->
 <view class="container">
-  <view class="userinfo">
-    <button wx:if="{{!hasUserInfo && canIUse}}" open-type="getUserInfo" bindgetuserinfo="getUserInfo"> 获取头像昵称 </button>
+  <!-- <view class="userinfo">
+    <button wx:if="{{!hasUserInfo && canIUse}}" open-type="getUserInfo" bindgetuserinfo="getUserInfo">
+      获取头像昵称
+    </button>
     <block wx:else>
       <image bindtap="bindViewTap" class="userinfo-avatar" src="{{userInfo.avatarUrl}}" mode="cover"></image>
       <text class="userinfo-nickname">{{userInfo.nickName}}</text>
@@ -10,5 +12,73 @@
   <view class="usermotto">
     <text class="user-motto" bindtap="bindViewTap2">{{motto}}</text>
     <text class="user-motto2" bindtap="bindViewTap">{{motto}}</text>
+  </view> -->
+  <swiper indicator-dots="{{indicatorDots}}" autoplay="{{autoplay}}" interval="{{interval}}" duration="{{duration}}" circular="{{circular}}">
+    <block wx:for="{{imgUrls}}" wx:key="key">
+      <swiper-item>
+        <image src="{{item}}" class="slide-image" />
+      </swiper-item>
+    </block>
+  </swiper>
+  <view class="tab-box">
+    <i-tabs id="affix" class="menu {{menuFixed ? 'tab-fixed': ''}}" current="{{ current }}" bindchange="handleChange">
+      <i-tab i-class="tab-change" key="tab1" title="民间诡事"></i-tab>
+      <i-tab i-class="tab-change" key="tab2" title="天下谜团"></i-tab>
+      <i-tab i-class="tab-change" key="tab3" title="网友怪谈" count="6"></i-tab>
+      <i-tab i-class="tab-change" key="tab4" title="推理解谜"></i-tab>
+    </i-tabs>
+  </view>>
+  <view class="list-body" wx:if="{{pageList1}}">
+    <view class="page-list" wx:if="{{current === 'tab1'}}">
+      <view class="list-body" wx:for="{{pageList1}}" wx:key="key">
+        <image class="user-photo" src="{{item.pageImg}}" />
+        <view class="info-box">
+          <view class="page-info">
+            <view class="page-name">{{item.name}}</view>
+            <view class="user-name">作者：{{item.author}}</view>
+            <view class="user-address">地址：{{item.address}}</view>
+          </view>
+          <view class="num-box">
+            <text>阅读数:{{item.readingNum}}</text>
+            <text>点赞数:{{item.thumbsNum}}</text>
+            <text>回答数:{{item.answerNum}}</text>
+          </view>
+        </view>
+      </view>
+    </view>
+    <view class="page-list" wx:if="{{current === 'tab2'}}">
+      <view class="list-body" wx:for="{{pageList2}}" wx:key="key">
+        <image class="user-photo" src="{{item.pageImg}}" />
+        <view class="info-box">
+          <view class="page-info">
+            <view class="page-name">{{item.name}}</view>
+            <view class="user-name">作者：{{item.author}}</view>
+            <view class="user-address">地址：{{item.address}}</view>
+          </view>
+          <view class="num-box">
+            <text>阅读数:{{item.readingNum}}</text>
+            <text>点赞数:{{item.thumbsNum}}</text>
+            <text>回答数:{{item.answerNum}}</text>
+          </view>
+        </view>
+      </view>
+    </view>
+    <view class="page-list" wx:if="{{current === 'tab3'}}">
+      <view class="list-body" wx:for="{{pageList3}}" wx:key="key">
+        <image class="user-photo" src="{{item.pageImg}}" />
+        <view class="info-box">
+          <view class="page-info">
+            <view class="page-name">{{item.name}}</view>
+            <view class="user-name">作者：{{item.author}}</view>
+            <view class="user-address">地址：{{item.address}}</view>
+          </view>
+          <view class="num-box">
+            <text>阅读数:{{item.readingNum}}</text>
+            <text>点赞数:{{item.thumbsNum}}</text>
+            <text>回答数:{{item.answerNum}}</text>
+          </view>
+        </view>
+      </view>
+    </view>
   </view>
 </view>
