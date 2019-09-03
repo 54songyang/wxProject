@@ -15,15 +15,7 @@ Page({
     interval: 2000,
     duration: 500,
     circular: true,
-    //tab列表
-    current: 'tab1',
-    current_scroll: 'tab1',
-    pageList1: '',
-    pageList2: '',
-    pageList3: '',
-    menuTop: '',
-    menuFixed: '',
-
+    newPageList: '',
   },
   //事件处理函数
   bindViewTap: function () {
@@ -38,7 +30,6 @@ Page({
   // },
   onLoad: function () {
     this.getList();
-    this.initClientRect();
     // if (app.globalData.userInfo) {
     //   this.setData({
     //     userInfo: app.globalData.userInfo,
@@ -74,24 +65,11 @@ Page({
   //     hasUserInfo: true
   //   })
   // },
-  handleChange({ detail }) {
-    this.setData({
-      current: detail.key
-    });
-  },
-  handleChangeScroll({ detail }) {
-    this.setData({
-      current_scroll: detail.key
-    });
-  },
   getList: function () {
     var that = this;
-    console.log(require('./data'));
     let info = require('./data').data.respBizMsg.pageInfo;
     that.setData({
-      pageList1: info.pageList.page1,
-      pageList2: info.pageList.page2,
-      pageList3: info.pageList.page3,
+      newPageList: info.newPageList,
       imgUrls: info.swiperList,
     })
     // wx.request({
@@ -119,26 +97,14 @@ Page({
     //   }
     // })
   },
-  initClientRect: function () {
-    var that = this;
-    var query = wx.createSelectorQuery()
-    query.select('#affix').boundingClientRect()
-    query.exec(function (res) {
-      that.setData({
-        menuTop: res[0].top
-      })
+  toDetail:function(e){
+    wx.navigateTo({
+      url: '../pageDetail/pageDetail?listId=' + e.currentTarget.dataset['listid']+'&pageType='+e.currentTarget.dataset['type'],
     })
   },
-  onPageScroll: function (scroll) {
-    var that = this;
-    if (scroll.scrollTop > that.data.menuTop) {
-      that.setData({
-        menuFixed: true
-      })
-    } else {
-      that.setData({
-        menuFixed: false
-      })
-    }
+  toList:function(el){
+    wx.navigateTo({
+      url: '../pageList/pageList?listId=' + el.currentTarget.dataset['listid']+'&pageType='+el.currentTarget.dataset['type'],
+    })
   }
 })

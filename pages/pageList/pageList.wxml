@@ -1,0 +1,23 @@
+<view class="list-body">
+  <view class="list-head">
+    <text class="list-name">{{title}}</text>
+    <image class="list-bg" src="{{headBg}}" />
+  </view>
+</view>
+<view class="page-list">
+  <view class="list-body" wx:for="{{listInfo}}" wx:key="key" bind:tap="toDetail" data-listid="{{item.listId}}">
+    <image class="user-photo" src="{{item.pageImg}}" />
+    <view class="info-box">
+      <view class="page-info">
+        <view class="page-name">{{item.name}}</view>
+        <view class="user-name">作者：{{item.author}}</view>
+        <view class="user-address">地址：{{item.address}}</view>
+      </view>
+      <view class="num-box">
+        <text>阅读数:{{item.readingNum}}</text>
+        <text>点赞数:{{item.thumbsNum}}</text>
+        <text>回答数:{{item.answerNum}}</text>
+      </view>
+    </view>
+  </view>
+</view>

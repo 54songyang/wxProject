@@ -5,15 +5,9 @@ export var data = {
   "respBizMsg": {
 
     "errorMsg": "xxx",
-    "pageInfo": {
-      "swiperList": [
-        'https://f10.baidu.com/it/u=3947674884,4087639518&fm=72',
-        'http://img3.imgtn.bdimg.com/it/u=538013906,1083683059&fm=26&gp=0.jpg',
-        'http://img0.imgtn.bdimg.com/it/u=2138460821,1824574315&fm=26&gp=0.jpg',
-        'http://img3.imgtn.bdimg.com/it/u=1317305545,2691973022&fm=26&gp=0.jpg',
-        'http://img2.imgtn.bdimg.com/it/u=3754071868,1803028676&fm=26&gp=0.jpg'
-      ],
-      "newPageList": [{
+    "listInfo": {
+      'headBg': 'http://img4.imgtn.bdimg.com/it/u=1722371689,2586708439&fm=26&gp=0.jpg',
+      'listArr': [{
         'name': '文章1',
         'author': "qwe",
         'address': '123',
@@ -132,7 +126,7 @@ export var data = {
         'pageImg': 'http://img3.imgtn.bdimg.com/it/u=1156745586,3531089989&fm=26&gp=0.jpg',
         'listId': '1234',
         'pageType':'0',
-      }],
+      }]
     }
   }
 

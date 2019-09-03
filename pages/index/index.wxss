@@ -77,3 +77,26 @@ margin-bottom: 0;
   font-size: 20rpx;
   text-align: right;
 }
+.change-btn{
+  display: flex;
+  width: 100%;
+  margin:20rpx 0;
+}
+.title-box{
+  display: block;
+  flex: 1;
+}
+.title-box .title-name{
+  display: block;
+  height: 150rpx;
+  width: 150rpx;
+  margin:0 auto;
+  text-align: center;
+  font-size: 30rpx;
+  line-height: 150rpx;
+  border-radius: 50%;
+  background:url('http://img2.imgtn.bdimg.com/it/u=1756570656,3412866270&fm=26&gp=0.jpg') no-repeat;
+  background-size: 100% 100%;
+  color: #fff;
+  text-shadow: 0 0 10rpx #000;
+}
