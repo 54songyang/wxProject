@@ -1,5 +1,5 @@
 {
-  "navigationBarTitleText": "第二页",
+  "navigationBarTitleText": "我要发布",
   "usingComponents": {
     "i-button": "../../dist/button/index"
   }

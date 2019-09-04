@@ -103,6 +103,12 @@ Page({
     })
   },
   toList:function(el){
+    if(el.currentTarget.dataset['type']==='3'){
+      wx.navigateTo({
+        url: '../reasoning/reasoning?listId=' + el.currentTarget.dataset['listid']+'&pageType='+el.currentTarget.dataset['type'],
+      })
+      return
+    }
     wx.navigateTo({
       url: '../pageList/pageList?listId=' + el.currentTarget.dataset['listid']+'&pageType='+el.currentTarget.dataset['type'],
     })

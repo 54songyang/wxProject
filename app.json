@@ -2,9 +2,12 @@
   "pages": [
     "pages/index/index",
     "pages/logs/logs",
-    "pages/page3/page3",
+    "pages/release/release",
     "pages/pageList/pageList",
-    "pages/pageDetail/pageDetail"
+    "pages/pageDetail/pageDetail",
+    "pages/my/my",
+    "pages/wxGroup/wxGroup",
+    "pages/reasoning/reasoning"
   ],
   "window": {
     "backgroundTextStyle": "light",
@@ -27,19 +30,19 @@
       {
         "selectedIconPath": "images/share-sle.png",
         "iconPath": "images/share.png",
-        "pagePath": "pages/logs/logs",
+        "pagePath": "pages/release/release",
         "text": "我要发布"
       },
       {
         "selectedIconPath": "images/people-sle.png",
         "iconPath": "images/people.png",
-        "pagePath": "pages/page3/page3",
+        "pagePath": "pages/my/my",
         "text": "个人中心"
       },
       {
         "selectedIconPath": "images/wx-sle.png",
         "iconPath": "images/wx.png",
-        "pagePath": "pages/page3/page3",
+        "pagePath": "pages/wxGroup/wxGroup",
         "text": "加微信群"
       }
     ]

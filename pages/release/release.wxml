@@ -1,0 +1,33 @@
+<view class="release-body">
+  <view class="release-h">
+    <view class="release-title">毛骨悚然的亲身经历</view>
+    <view class="release-head">
+      <text class="head-info">作者：无锁无诶</text>
+      <text class="head-info">地区：北京</text>
+    </view>
+  </view>
+  <view class="release-m">
+    <view class="editor-box">
+      <textarea class="editor-title" auto-height placeholder="请输入标题" />
+      <view class="editor-bg-box">
+        <view style="background-image:url({{editorBg}})" class="editor-bg"></view>
+        <editor id="editor" class="ql-container" placeholder="请输入正文" showImgSize showImgToolbar showImgResize bindready="onEditorReady"></editor>
+      </view>
+      <i-button i-class="set-img" bind:click="insertImage">插入图片</i-button>
+    </view>
+  </view>
+  <view class="release-f">
+    <view class="bg-title">背景模版</view>
+    <view class="bg-box">
+      <image bind:tap="changeBg" class="bg-tab" data-src="http://img4.imgtn.bdimg.com/it/u=3135402106,3540163108&fm=26&gp=0.jpg" src="http://img4.imgtn.bdimg.com/it/u=3135402106,3540163108&fm=26&gp=0.jpg" />
+      <image bind:tap="changeBg" class="bg-tab" data-src="https://ss2.bdstatic.com/70cFvnSh_Q1YnxGkpoWK1HF6hhy/it/u=2085416026,1186179772&fm=26&gp=0.jpg" src="https://ss2.bdstatic.com/70cFvnSh_Q1YnxGkpoWK1HF6hhy/it/u=2085416026,1186179772&fm=26&gp=0.jpg" />
+      <image bind:tap="changeBg" class="bg-tab" data-src="https://ss1.bdstatic.com/70cFvXSh_Q1YnxGkpoWK1HF6hhy/it/u=3985245024,4052706449&fm=26&gp=0.jpg" src="https://ss1.bdstatic.com/70cFvXSh_Q1YnxGkpoWK1HF6hhy/it/u=3985245024,4052706449&fm=26&gp=0.jpg" />
+      <image bind:tap="changeBg" class="bg-tab" data-src="https://ss1.bdstatic.com/70cFvXSh_Q1YnxGkpoWK1HF6hhy/it/u=3259874551,769034232&fm=26&gp=0.jpg" src="https://ss1.bdstatic.com/70cFvXSh_Q1YnxGkpoWK1HF6hhy/it/u=3259874551,769034232&fm=26&gp=0.jpg" />
+      <image bind:tap="changeBg" class="bg-tab" data-src="https://ss2.bdstatic.com/70cFvnSh_Q1YnxGkpoWK1HF6hhy/it/u=615840981,2121190925&fm=15&gp=0.jpg" src="https://ss2.bdstatic.com/70cFvnSh_Q1YnxGkpoWK1HF6hhy/it/u=615840981,2121190925&fm=15&gp=0.jpg" />
+    </view>
+    <view class="btn-box">
+      <button class="editor-btn" bind:tap="preservation">保存</button>
+      <button class="editor-btn" bind:tap="submit">提交</button>
+    </view>
+  </view>
+</view>

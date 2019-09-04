@@ -1,4 +1,4 @@
-<view class="list-body">
+<view class="list-body mrgin-no" style="opacity:{{headOp}};">
   <view class="list-head">
     <text class="list-name">{{title}}</text>
     <image class="list-bg" src="{{headBg}}" />

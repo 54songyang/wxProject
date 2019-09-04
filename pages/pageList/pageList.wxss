@@ -29,6 +29,9 @@
   padding:10rpx 20rpx;
   color: #333;
 }
+.mrgin-no{
+  padding:0;
+}
 .list-body:last-child{
 margin-bottom: 0;
 }
@@ -36,7 +39,7 @@ margin-bottom: 0;
   display: block;
   width: 180rpx;
   height: auto;
-  margin-right: 10px;
+  margin-right: 10rpx;
 }
 .list-body .info-box{
   display: flex;

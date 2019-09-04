@@ -1,5 +1,5 @@
 {
-  "navigationBarTitleText": "自学小程序",
+  "navigationBarTitleText": "怪谈",
   "usingComponents": {
     "i-tabs": "../../dist/tabs/index",
     "i-tab": "../../dist/tab/index",
