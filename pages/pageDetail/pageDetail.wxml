@@ -33,6 +33,7 @@
     <i-button i-class="to-home" shape="circle" size="small" bind:tap="toHome">首页</i-button>
     <input class="answer-input" type="text" maxlength="100" placeholder="请输入评论" value="{{comment}}" bindblur="setComment" />
     <i-button open-type="getUserInfo" i-class="send-btn" shape="circle" size="small" bindgetuserinfo="sendInfo">发送</i-button>
-    <i-button i-class="invitation-btn" shape="circle" size="small">邀请群友</i-button>
+    <i-button open-type='share' i-class="invitation-btn" shape="circle" size="small">邀请群友</i-button>
   </view>
 </view>
+<i-toast id="toast" />

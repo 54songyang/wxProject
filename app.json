@@ -9,9 +9,12 @@
     "pages/wxGroup/wxGroup",
     "pages/reasoning/reasoning"
   ],
+  "usingComponents": {
+    "i-toast": "../../dist/toast/index"
+  },
   "window": {
     "backgroundTextStyle": "light",
-    "navigationBarBackgroundColor": "#f0f0f0",
+    "navigationBarBackgroundColor": "#f6f6f6",
     "navigationBarTitleText": "WeChat",
     "navigationBarTextStyle": "black"
   },

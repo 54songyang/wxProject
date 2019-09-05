@@ -1,6 +1,6 @@
 Page({
   data: {
-    pageId:'',
+    pageId: '',
     title: "",
     author: "",
     address: "",
@@ -30,13 +30,17 @@ Page({
       title: title
     })
     this.getInfo(e);
+    wx.$Toast({
+      content: '测试toast',
+      type: 'loading'
+    });
   },
   getInfo: function (val) {
     const that = this;
     console.log(val);
     var info = require('./data').data.respBizMsg
     that.setData({
-      pageId:info.pageId,
+      pageId: info.pageId,
       title: info.title,
       author: info.author,
       address: info.address,
@@ -84,9 +88,9 @@ Page({
     if (that.data.comment) {
       const userInfo = e.detail.userInfo;
       let data = {
-        pageId:that.data.pageId,
+        pageId: that.data.pageId,
         userInfo,
-        comment:that.data.comment
+        comment: that.data.comment
       }
       console.log(data);
       // !!!返回内容为评论列表

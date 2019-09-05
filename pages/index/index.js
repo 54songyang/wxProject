@@ -1,7 +1,6 @@
 //index.js
 //获取应用实例
 const app = getApp()
-
 Page({
   data: {
     // userInfo: {},
@@ -30,6 +29,9 @@ Page({
   // },
   onLoad: function () {
     this.getList();
+    wx.showShareMenu({
+      withShareTicket: true
+    })
     // if (app.globalData.userInfo) {
     //   this.setData({
     //     userInfo: app.globalData.userInfo,
