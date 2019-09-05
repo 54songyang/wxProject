@@ -1,0 +1,38 @@
+<import src="../../wxParse/wxParse.wxml" />
+<view class="page-detail">
+  <view class="bg-po">
+    <view class="detail-info">
+      <view>标题：{{title}}</view>
+      <view>作者：{{author}}</view>
+      <view>所在地区：{{address}}</view>
+      <view class="detail-info-box">
+        <text class="time">{{date}}</text>
+        <text class="time">{{pageType}}</text>
+        <text class="time">回答数：{{answerNum}}</text>
+        <text class="time">阅读数：{{readNum}}</text>
+      </view>
+    </view>
+    <view class="detail-content">
+      <template is="wxParse" data="{{wxParseData:article.nodes}}" />
+    </view>
+    <view class="content-bg" style="background-image:url({{pageBg}})"></view>
+  </view>
+  <view class="anwer-body">
+    <view class="answer-list">
+      <view class="list-part" wx:for="{{answerList}}" wx:key="key">
+        <image class="answer-img" src="{{item.answerPhoto}}" />
+        <view class="list-f">
+          <text class="answer-p answer-name">{{item.answerName}}</text>
+          <text class="answer-p answer-content">{{item.answerContent}}</text>
+          <text class="answer-p answer-time">{{item.answerDate}}</text>
+        </view>
+      </view>
+    </view>
+  </view>
+  <view class="anwser-form-box">
+    <i-button i-class="to-home" shape="circle" size="small" bind:tap="toHome">首页</i-button>
+    <input class="answer-input" type="text" maxlength="100" placeholder="请输入评论" value="{{comment}}" bindblur="setComment" />
+    <i-button open-type="getUserInfo" i-class="send-btn" shape="circle" size="small" bindgetuserinfo="sendInfo">发送</i-button>
+    <i-button i-class="invitation-btn" shape="circle" size="small">邀请群友</i-button>
+  </view>
+</view>
