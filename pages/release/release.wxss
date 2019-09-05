@@ -6,6 +6,7 @@
   font-size: 40rpx;
   text-align: center;
   line-height: 50rpx;
+  padding-top:30rpx;
 }
 .release-head{
   display:flex;

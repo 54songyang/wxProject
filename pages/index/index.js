@@ -89,20 +89,20 @@ Page({
     //   }
     // })
   },
-  toDetail:function(e){
+  toDetail: function (e) {
     wx.navigateTo({
-      url: '../pageDetail/pageDetail?listId=' + e.currentTarget.dataset['listid']+'&pageType='+e.currentTarget.dataset['type'],
+      url: '../pageDetail/pageDetail?listId=' + e.currentTarget.dataset['listid'] + '&pageType=' + e.currentTarget.dataset['type'],
     })
   },
-  toList:function(el){
-    if(el.currentTarget.dataset['type']==='3'){
+  toList: function (el) {
+    if (el.currentTarget.dataset['type'] === '3') {
       wx.navigateTo({
-        url: '../reasoning/reasoning?listId=' + el.currentTarget.dataset['listid']+'&pageType='+el.currentTarget.dataset['type'],
+        url: '../reasoning/reasoning?listId=' + el.currentTarget.dataset['listid'] + '&pageType=' + el.currentTarget.dataset['type'],
       })
       return
     }
     wx.navigateTo({
-      url: '../pageList/pageList?listId=' + el.currentTarget.dataset['listid']+'&pageType='+el.currentTarget.dataset['type'],
+      url: '../pageList/pageList?listId=' + el.currentTarget.dataset['listid'] + '&pageType=' + el.currentTarget.dataset['type'],
     })
   }
 })
