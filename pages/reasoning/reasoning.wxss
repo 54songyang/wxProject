@@ -1,1 +1,100 @@
-/* pages/reasoning/reasoning.wxss */
+.reasoning-body{
+  margin:0rpx 30rpx;
+  font-size: 25rpx;
+  display: flex;
+  height: 100vh;
+  flex-direction: column;
+}
+.reasoning-head{
+  height: 114rpx;
+}
+.left-h{
+  float: left;
+  width: 50%;
+}
+.right-h{
+  float: left;
+  text-align: right;
+  width: 30%;
+}
+.rr-h{
+  float: left;
+  width: 20%;
+}
+.reasoning-title{
+  display: block;
+}
+.part-num{
+  display: block;
+}
+.join-num{
+  display: block;
+  color: #666;
+}
+.coin-num{
+  display: block;
+  font-size: 20rpx;
+  line-height: 30rpx;
+}
+.user-img{
+  display: block;
+  width: 80rpx;
+  height: 80rpx;
+  border-radius: 50%;
+  margin:0 auto;
+}
+.user-name{
+  display: inline-block;
+  /* display: block; */
+  margin-top: 10rpx;
+}
+.reasoning-body .invitation-btn{
+  padding:0;
+  margin:0;
+  width:100rpx;
+  height: 40rpx;
+  font-size: 20rpx;
+  line-height: 40rpx;
+  float: right;
+}
+.button-box{
+  display: flex;
+}
+.button-box .btn{
+  flex: 1;
+  padding:20rpx 0;
+}
+.question{
+  margin-top: 10rpx;
+  flex: 1;
+}
+.reasoning-content{
+  font-size: 30rpx;
+  color: #333;
+  margin-bottom: 10rpx;
+  text-indent: 64rpx;
+}
+.reasoning-radio .radio-btn{
+  margin-bottom: 10rpx;
+}
+.button-box .clue{
+  margin:0 auto;
+  background:url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAACSUlEQVRYR7WXQTYDURBFX1bADrACsgKsADtgBVgBVoCZGTNDsgKyAkxNyArEzNC5fX5Fpf3urqS765w+6UF11av3q96vDPRnW5LOJPG7KulV0qOka+fT+esgRTyUdFsRHRAHnWdOAQFAxS8NCS4knfcBAgBUuBcIbmwFXOMuBP2UtBb45EbST2IM952Gb+ghYlPgOL3/+wQAU0krAQBtXe4knaZ8s1gAeJa0HYh+L+k9VUJlAKfKnDFF9BYs7UvaTE58N/QgAHAi6bIBwCgFCuDMugCEo4BpCt41L2usukb8lrRepm4JJH7aNqwnfGczZgiRNypHI6C7C7PjhgHelRstr4RdJTbwBuBIEk2ZBdBFpVWN+ZFkvpaBPgAwFU9pMtCEmYb0om6uAhIfp0njnYYm+Wx8+wDAxCDtpgGGh8ppaLRgTojaUk7TIjQk5AGANxIzYUXXl20ZBkhIhaZ0UFs2kqItPHMVLwsA6pBrZLWckHPlTKnQnjCrTQwg04iTT0pCn6zqPgiBqALAOT64q3eS6EQ8WiWMHAHVmmCQmAYqVKsPyzFgd8Jb6uou5Jii7EqmQWvH0PSaRZQubmMkZtmleb1RJHtm9i74d2MticAfZS5EsW3njsB2g7breGTZzQJAzbg4sOweF2CE6r8CfuOqMSz/UaEaExsTnnJ832io5FUAwLROiGCCINa9gXgLu0yalJCIpvkAsm23ao337EQ27VEEwMJlpQ9yO2Y51rBPACSrm4RiL+wbACAQIS41jtL+zMBOcaf8AmWcduDOddK8AAAAAElFTkSuQmCC) no-repeat !important;
+  background-size: 100% 100%;
+  height: 64rpx;
+  width: 64rpx;
+}
+.to-prev{
+  margin: 0 auto;
+  background: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAACLElEQVRYR+2W7zEEQRDF30WACMiADMiADBABIkAEiAARIIOTARmQARFQv6vpq1dj9s/NbNV90V9ub/ft9OvXr2dnpjXHbM359U9gSgU2JZ1Jepf03NPaK0k/kq7BTEXgSNKNpJ2UuLTugaT7HNNKgIQkhoCHr4syl5LOS5gWAizIwiT4lnQi6Sldc4+AGFUHBvkhvFS/hsBeWgRJicdU3Vf6/ZD0lhIH5sWe0f8qAmEyqiA+U9XzTNqSMm7KKgK5gXDwrSSqjkAZ5OaXuJMEWcdwfyUCVE3P6C/BiHGNxBG5ybqUCfxoAiQiuRuIqj1KykSLMujy7yABRgspw0CvqWrM5VWDifEDQ+9dmSoCsGc389HKd7XcZLyTK9OVvNcDJDpMb/po+WIkgiDho9WXMH/W2QLGaT+hIXNacLATAA/GWzOGSK8HkBOJN1Jy/jNOHpgTIoHhevFhGRmjTPhgapQqxSNgomWYDzWaTehF4HCSUCmBGnmlTAqY7YQJNfLNx9cdVMDBVMqix+kmFV5I8u0XTEwGMDyBGvkWHeuuRCBeGlMpWzBq7A4YuYpAEKENfIKjUtQo7RPgwqSow1g3KeBtoVLaUhpZksXnGEyY1I3cpIATIZlXGjsiBtxKQDcy9yEV34rFWaTmQJKb1McxnuVHstji/d1JCMSCVEp1jCPHsziSeUKMDCZMOikBEsU4MqpDx/LYV5pb4BVWXbd6oCrpHyM0r9KwwNoV+AX6zJAhg7s6PwAAAABJRU5ErkJggg==) no-repeat;
+  background-size: 100% 100%;
+  height: 64rpx;
+  width: 64rpx;
+}
+.to-next{
+  margin: 0 auto;
+  background: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAACAklEQVRYR+2X/TEEQRDF30VABmRABoiADBABIkAEiAAZkIHLgAzIgAio31X3Ve+Y2Z39qLp/tquUc9c3897r92bWQhuuxYb31wwgKnApaUvSbctYTiTtSXqQ9D3F+CKAX1vwU9K5pLfMBrx3YJvT8zIWRA6Ar/kk6Sph6gC8BwD0AHpQ5QCw4I2NA5kjUwfAmHxk9NDPWHpXDgDv7UpCAeSm2Bgg+/bDhtvWc2w979bD7+oqAfAFMB1AMCdM7zMmPbSeHfuSq1Fl0i4ArAlTNj5tYUoPG19UGLmhTg0A/0LK1NWITBkRihFVCpMyuqIafQC4GpjvOjDFtGkcUSOalNfPOWP0BeBr1DAtGbkR2aEAHAjMYmRzcTwzD2Fkip71aTsWAAumTDkPABYrjSyxPqJhKgB3kogsVQKAbxzYUhKmHg3ADQnDH5OXdMQC2KPFmR4+ZwyrGqoAJoT1ioWkV0nMOsaN0URlYE3PaBOC3mP4ZYumN2eqDH9zPvyrPgrAFilh5rMGTHoQdSnTAFEDgPlGA30Y6/TSqVGmtwKtBrLVUmXIOEYbdRmVDIT5uPWIWq0yudGv3ys9kCC5Rwvn+lmP7Fw0nP+xB/nT+LVu3BZD/4zLA/dGKdNHMuJHz6SPZKVoAcwBcKBEZarYdsUQJv5gUVoQU+KDapN1IZv/M5oV+APqkJkhB7I6kQAAAABJRU5ErkJggg==) no-repeat;
+  background-size: 100% 100%;
+  width:64rpx;
+  height: 64rpx;
+}

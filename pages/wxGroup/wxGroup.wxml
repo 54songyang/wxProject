@@ -1,2 +1,21 @@
-<!--pages/wxGroup/wxGroup.wxml-->
-<text>微信群</text>
+<view class="group-body">
+  <text class="part-1">为什么要加入微信群?</text>
+  <text class="part-an">因为所以因为所以因为所以因为所以因为所以因为所以因为所以因为所以因为所以因为所以</text>
+  <view class="part-2">
+    <text class="title">如何加入微信群</text>
+    <view class="content">
+      <view class="content-1">
+        <text class="content-title">方法一:搜索微信号</text>
+        <view class="copy-code">
+          <text class="code">9283908203wuei</text>
+          <i-button type="success" class="wx-code" bind:tap="copyText" data-code="9283908203wuei">点击复制微信号</i-button>
+        </view>
+      </view>
+      <view class="content-2">
+        <text class="content-title">方法二:识别下方二维码图片</text>
+        <image class="qr-code" bind:tap="previewImg" data-src="https://ss3.bdstatic.com/70cFv8Sh_Q1YnxGkpoWK1HF6hhy/it/u=620579142,3051099267&fm=26&gp=0.jpg" src="https://ss3.bdstatic.com/70cFv8Sh_Q1YnxGkpoWK1HF6hhy/it/u=620579142,3051099267&fm=26&gp=0.jpg" />
+        <text class="tip">提示：点击可放大</text>
+      </view>
+    </view>
+  </view>
+</view>

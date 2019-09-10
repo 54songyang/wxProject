@@ -1,2 +1,34 @@
-<!--pages/reasoning/reasoning.wxml-->
-<text>推理解谜</text>
+<!-- pages/reasoning/reasoning.wxml -->
+<wxs module="filter" src="../../fliter.wxs"></wxs>
+<view class="reasoning-body">
+  <view class="reasoning-head">
+    <view class="left-h">
+      <text class="reasoning-title">名侦探案推理 ，令你的IQ大爆炸</text>
+      <text class="part-num">第一个案例</text>
+      <text class="join-num">参与调查人数：3984</text>
+    </view>
+    <view class="right-h">
+      <open-data class="user-name" type="userNickName"></open-data>
+      <!-- <text class="user-name">{{userInfo.nickName}}</text> -->
+      <text class="coin-num">1000枚</text>
+    </view>
+    <view class="rr-h">
+      <open-data class="user-img" type="userAvatarUrl"></open-data>
+      <i-button open-type='share' i-class="invitation-btn">邀请群友</i-button>
+    </view>
+    <!-- <image src="{{userInfo.avatarUrl?userInfo.avatarUrl:'https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1567752264033&di=8d10037d12730a9ffc87d8fa25a63e3e&imgtype=0&src=http%3A%2F%2Fhbimg.b0.upaiyun.com%2Fa12f24e688c1cda3ff4cc453f3486a88adaf08cc2cdb-tQvJqX_fw658'}}" /> -->
+  </view>
+  <view class="question">
+    <view class="reasoning-content">
+      <text class="content">{{reasoningList[questionIndex].content}}</text>
+    </view>
+    <view class="reasoning-radio">
+      <i-button i-class="radio-btn" type="{{reasoningList[questionIndex].radioIndex==index?'success':'info'}}" shape="circle" wx:for="{{reasoningList[questionIndex].option}}" wx:key="key" data-index="{{index}}" bind:tap="choice">{{filter.numberToLetter(index)+":"+item}}</i-button>
+    </view>
+  </view>
+  <view class="button-box">
+    <view class="btn"><view wx:if="{{questionIndex>0}}" class="to-prev" bind:tap="toPrev"></view></view>
+    <view class="btn" bind:tap="clue"><view class="clue"></view></view>
+    <view class="btn"><view class="to-next" bind:tap="toNext"></view></view>
+  </view>
+</view>

@@ -1,0 +1,9 @@
+var filter = {
+  numberToLetter: function (val) {
+    return Number(val+10).toString(36).toUpperCase();
+  }
+}
+// 导出对外暴露的属性
+module.exports = {
+  numberToLetter: filter.numberToLetter
+}

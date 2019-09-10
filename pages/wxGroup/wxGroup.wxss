@@ -1,1 +1,37 @@
-/* pages/wxGroup/wxGroup.wxss */
+.group-body{
+  padding:0 30rpx;
+}
+.part-1,.title{
+  display: block;
+  font-size: 40rpx;
+  color: #333;
+  margin-top: 20rpx;
+}
+.part-an{
+  display: block;
+  font-size: 28rpx;
+  color: #666;
+  margin-top: 10rpx;
+}
+.content-title{
+  font-size: 28rpx;
+  color: #333;
+  line-height: 80rpx;
+}
+.copy-code{
+  display: flex;
+  align-items: center;
+}
+.code{
+  display: block;
+  flex: 1;
+}
+.qr-code{
+  display: block;
+  width:400rpx;
+  height: 400rpx;
+}
+.tip{
+  font-size: 24rpx;
+  color: #999;
+}
